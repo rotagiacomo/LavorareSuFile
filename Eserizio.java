@@ -1,16 +1,38 @@
 import java.io.*;
 public class Eserizio {
-    public String[] leggiFile(String url) throws FileNotFoundException{
+    private String[] righeLette;
+    public void leggiFile(String url) throws IOException{
         try {
             FileReader fr = new FileReader(url);
             BufferedReader br = new BufferedReader(fr);
-            int numeroRighe = (int) (br.lines().count());
-            String[] righe = new String[numeroRighe];
+            int numeroRighe = (int) (br.lines().count()); //consuma tutto lo stream
+            br.close(); //chiude br e fr
+            br = new BufferedReader(new FileReader(url)); //riapro un nuovo stream
+            righeLette = new String[numeroRighe];
             for(int i = 0; i<numeroRighe; i++){
-                righe[i] = br.lines().toString();
+                righeLette[i] = br.readLine();
             }
-            return righe;
-        }catch(FileNotFoundException eccezione){
+            br.close();
+        }catch(IOException eccezione){
+            throw eccezione;
+        }
+    }
+
+    public void stampaRigheLette(){
+        for (int i = 0; i<righeLette.length; i++){
+            System.out.println(righeLette[i]);
+        }
+    }
+
+    public void creaFileCopia(String urlCopia) throws IOException{
+        try {
+            FileWriter fw = new FileWriter(urlCopia);
+            PrintWriter pr = new PrintWriter(fw);
+            for (int i = 0; i<righeLette.length; i++){
+                pr.println(righeLette[i]);
+            }
+            pr.close(); //chiude e stampa le righe
+        }catch (IOException eccezione){
             throw eccezione;
         }
     }

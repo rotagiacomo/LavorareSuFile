@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.io.*;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException, IOException{
-        File documento = new File("/workspaces/LavorareSuFile/doc.txt");
+        /*File documento = new File("/workspaces/LavorareSuFile/doc.txt");
         Scanner scanner;
         try{
             scanner = new Scanner(documento);
@@ -26,9 +26,11 @@ public class Main {
             throw eccezione;
         }
         documento1.close();
-        fileBuffered.close();
-
-        PrintWriter stampa = new PrintWriter();
+        fileBuffered.close();*/
+        Eserizio a = new Eserizio();
+        a.leggiFile("csv.txt");
+        a.stampaRigheLette();
+        a.creaFileCopia("copia.txt");
     }
 
 
