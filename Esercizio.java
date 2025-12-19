@@ -1,5 +1,5 @@
 import java.io.*;
-public class Eserizio {
+public class Esercizio {
     private String[] righeLette;
     public void leggiFile(String url) throws IOException{
         try {

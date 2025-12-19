@@ -1,7 +1,0 @@
-Nome, Cognome, Sport, Squadra, Ruolo, Età, Partite_Giocate, Punti_Segnati, Assist, Note
-Luca, Bianchi, Basket, Milano Eagles, Guardia, 27, 32, 540, 120, MVP della stagione
-Marco, Rossi, Calcio, Roma United, Attaccante, 24, 28, 18, 7, Capocannoniere
-Giulia, Ferri, Pallavolo, Torino Spike, Palleggiatrice, 22, 30, 0, 860, Miglior assist
-Anna, Verdi, Tennis, NA, NA, 26, 45, 32, 0, Vincitrice 3 tornei
-Paolo, Neri, Nuoto, Napoli Dolphins, Stile Libero, 21, 12, 0, 0, Record personale nei 100 m
-Sara, Lombardi, Atletica, Firenze Runners, Velocista, 29, 14, 0, 0, Oro nei 200 m
